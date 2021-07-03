@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import ControlledAccordions from "./ControlledAccordions";
-import { setNavName } from "../../../../redux/menuReducer";
+import { getTableData } from "../../../../redux/menuReducer";
 
 let mapStateToProps = (state) => {
   return {
@@ -8,8 +8,8 @@ let mapStateToProps = (state) => {
   };
 };
 
-const ControlledAccordionsContainer = connect(mapStateToProps, { setNavName })(
-  ControlledAccordions
-);
+const ControlledAccordionsContainer = connect(mapStateToProps, {
+  getTableData,
+})(ControlledAccordions);
 
 export default ControlledAccordionsContainer;

@@ -1,14 +1,17 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
 
-import { HISTORY_CATEGORY, HISTORY } from "../../../../constants";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@material-ui/core";
+
+import { HISTORY } from "../../../../constants";
 
 const useStyles = makeStyles({
   table: {
@@ -16,7 +19,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function DenseTable() {
+export default function TableHistory(state) {
   const classes = useStyles();
 
   return (
@@ -24,13 +27,13 @@ export default function DenseTable() {
       <Table className={classes.table} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            {HISTORY_CATEGORY.map((e) => (
-              <TableCell>{e.name}</TableCell>
+            {state.categories.map((e, i) => (
+              <TableCell key={e + i}>{e.name}</TableCell>
             ))}
           </TableRow>
         </TableHead>
         <TableBody>
-          {HISTORY.map((e, i) => (
+          {state.tableData.map((e, i) => (
             <TableRow key={e + i}>
               <TableCell> {e.nubmer} </TableCell>
               <TableCell> {e.DO} </TableCell>
@@ -46,15 +49,3 @@ export default function DenseTable() {
     </TableContainer>
   );
 }
-
-// {rows.map((row) => (
-//   <TableRow key={row.name}>
-//     <TableCell component="th" scope="row">
-//       {row.name}
-//     </TableCell>
-//     <TableCell align="right">{row.calories}</TableCell>
-//     <TableCell align="right">{row.fat}</TableCell>
-//     <TableCell align="right">{row.carbs}</TableCell>
-//     <TableCell align="right">{row.protein}</TableCell>
-//   </TableRow>
-// ))}

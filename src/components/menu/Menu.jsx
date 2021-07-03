@@ -19,7 +19,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
 import ControlledAccordionsContainer from "./extra/Accordion/ControlledAccordionsContainer";
-import Table from "./extra/Table/Table";
+import TableContainer from "./extra/Table/TableContainer";
 
 const drawerWidth = 240;
 
@@ -91,7 +91,6 @@ export default function Menu(state) {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  console.log(state);
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -149,7 +148,7 @@ export default function Menu(state) {
         })}
       >
         <div className={classes.drawerHeader} />
-        <Table />
+        {state.tableIsReady ? <TableContainer /> : null}
       </main>
     </div>
   );

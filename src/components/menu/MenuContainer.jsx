@@ -1,12 +1,12 @@
 import { connect } from "react-redux";
 import Menu from "./Menu";
-import { setNavName } from "../../redux/menuReducer";
 
 let mapStateToProps = (state) => {
   return {
     heading: state.menu.navBarName,
+    tableIsReady: state.menu.tableIsReady,
   };
 };
 
-const MenuContainer = connect(mapStateToProps, { setNavName })(Menu);
+const MenuContainer = connect(mapStateToProps, {})(Menu);
 export default MenuContainer;

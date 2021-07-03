@@ -1,9 +1,10 @@
-import HISTORY from '../constants'
+import { HISTORY } from '../constants'
 
 export default class ApiService {
-    static getData = () => {
-        return new Promise((resolve) => {
-            resolve(HISTORY)
-        })
+    static getTable = (name) => {
+        if (name === "История")
+            return new Promise((resolve) => {
+                resolve(HISTORY)
+            })
     }
 }

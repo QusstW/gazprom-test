@@ -45,12 +45,14 @@ export default function ControlledAccordions(state) {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography className={classes.heading}>Аналитика</Typography>
+          <Typography component={"span"} className={classes.heading}>
+            Аналитика
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <List>
             {state.analyticsList.map((e, i) => (
-              <ListItem button key={i} onClick={() => state.setNavName(e)}>
+              <ListItem button key={i} onClick={() => state.getTableData(e)}>
                 {e}
               </ListItem>
             ))}
@@ -66,10 +68,12 @@ export default function ControlledAccordions(state) {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography className={classes.heading}>Каталоги</Typography>
+          <Typography component={"span"} className={classes.heading}>
+            Каталоги
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography component={"span"}>
             <List>
               {[
                 "Каталог 1",
