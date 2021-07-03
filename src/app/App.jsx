@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Menu } from "../components";
+// import { Menu } from "../components";
+import MenuContainer from "../components/menu/MenuContainer";
 
 const App = () => {
-  return <Menu />;
+  return <MenuContainer />;
 };
 export default App;
