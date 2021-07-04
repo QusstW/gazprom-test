@@ -11,8 +11,6 @@ import {
   Paper,
 } from "@material-ui/core";
 
-import { HISTORY } from "../../../../constants";
-
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
