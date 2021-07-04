@@ -1,28 +1,44 @@
 const history = {
-    categories: [{
-        name: '№..'
-    },
-    {
-        name: 'ДО'
-    },
-    {
-        name: 'Месторождение'
-    },
-    {
-        name: 'КС'
-    },
-    {
-        name: 'КУ'
-    },
-    {
-        name: 'Дата'
-    },
-    {
-        name: 'Значение'
-    }],
+    categories: [
+        {
+            field: "id",
+            headerName: "№...",
+            width: 100
+        },
+        {
+            field: "DO",
+            headerName: "ДО",
+            width: 300
+        },
+        {
+            field: "placeField",
+            headerName: "Месторождение",
+            width: 200
+        },
+        {
+            field: "KS",
+            headerName: "КС",
+            width: 120
+        },
+        {
+            field: "KY",
+            headerName: "КУ",
+            width: 120
+        },
+        {
+            field: "date",
+            headerName: "Дата",
+            width: 120
+        },
+        {
+            field: "value",
+            headerName: "Значение",
+            width: 150
+        },
+    ],
     bodyTable: [
         {
-            nubmer: 1,
+            id: 1,
             DO: 'ООО "Газпромнефть-Ямал"',
             placeField: 'Новопортовское',
             KS: 'КС1',
@@ -31,7 +47,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 2,
+            id: 2,
             DO: 'ООО "Газпромнефть-Ямал"',
             placeField: 'Новопортовское',
             KS: 'КС1',
@@ -40,7 +56,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 3,
+            id: 3,
             DO: 'ООО "Газпромнефть-Ямал"',
             placeField: 'Новопортовское',
             KS: 'КС1',
@@ -49,7 +65,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 4,
+            id: 4,
             DO: 'ООО "Газпромнефть-Ямал"',
             placeField: 'Новопортовское',
             KS: 'КС1',
@@ -58,7 +74,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 5,
+            id: 5,
             DO: 'ООО "Газпромнефть-Ямал"',
             placeField: 'Новопортовское',
             KS: 'КС1',
@@ -67,7 +83,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 6,
+            id: 6,
             DO: 'ООО "Газпромнефть-Ямал"',
             placeField: 'Новопортовское',
             KS: 'КС1',
@@ -76,7 +92,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 7,
+            id: 7,
             DO: 'ООО "Газпромнефть-Ямал"',
             placeField: 'Новопортовское',
             KS: 'КС1',
@@ -85,7 +101,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 8,
+            id: 8,
             DO: 'ООО "Газпромнефть-Ямал"',
             placeField: 'Новопортовское',
             KS: 'КС1',
@@ -94,7 +110,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 9,
+            id: 9,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-1',
@@ -103,7 +119,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 10,
+            id: 10,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-1',
@@ -112,7 +128,7 @@ const history = {
             value: 'РЕМОНТ'
         },
         {
-            nubmer: 11,
+            id: 11,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-1',
@@ -121,7 +137,7 @@ const history = {
             value: 'НОс'
         },
         {
-            nubmer: 12,
+            id: 12,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-2',
@@ -130,7 +146,7 @@ const history = {
             value: 'ХОЛОДНЫЙ РЕЗЕРВ'
         },
         {
-            nubmer: 13,
+            id: 13,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-2',
@@ -139,7 +155,7 @@ const history = {
             value: 'РЕМОНТ'
         },
         {
-            nubmer: 13,
+            id: 13,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-2',
@@ -148,7 +164,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 14,
+            id: 14,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-2',
@@ -157,7 +173,7 @@ const history = {
             value: 'НОс'
         },
         {
-            nubmer: 15,
+            id: 15,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-3',
@@ -166,7 +182,7 @@ const history = {
             value: 'РЕМОНТ'
         },
         {
-            nubmer: 16,
+            id: 16,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-3',
@@ -175,7 +191,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 17,
+            id: 17,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-3',
@@ -184,7 +200,7 @@ const history = {
             value: 'АОс'
         },
         {
-            nubmer: 18,
+            id: 18,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-4',
@@ -193,7 +209,7 @@ const history = {
             value: 'РЕМОНТ'
         },
         {
-            nubmer: 19,
+            id: 19,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-4',
@@ -202,7 +218,7 @@ const history = {
             value: 'ПОДГОТОВКА ХР'
         },
         {
-            nubmer: 20,
+            id: 20,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-4',
@@ -211,7 +227,7 @@ const history = {
             value: 'ГТД РАБОТА'
         },
         {
-            nubmer: 21,
+            id: 21,
             DO: 'ООО "Газпромнефть-Оренбург"',
             placeField: 'ВУ ОНГКМ',
             KS: 'ТЛ-4',

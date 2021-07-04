@@ -8,6 +8,8 @@ import {
   List,
   ListItem,
 } from "@material-ui/core";
+import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
+import InsertDriveFileOutlinedIcon from "@material-ui/icons/InsertDriveFileOutlined";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
@@ -52,8 +54,27 @@ export default function ControlledAccordions(state) {
         <AccordionDetails>
           <List>
             {state.analyticsList.map((e, i) => (
-              <ListItem button key={i} onClick={() => state.getTableData(e)}>
-                {e}
+              <ListItem
+                style={{
+                  backgroundColor: state.navBarName === e ? "#00bbd3" : null,
+                  color: state.navBarName === e ? "#ffffff" : null,
+                }}
+                button
+                key={i}
+                onClick={() => state.getTableData(e)}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  <div>
+                    <DescriptionOutlinedIcon />
+                  </div>
+                  <div style={{ marginLeft: "10px" }}> {e}</div>
+                </div>
               </ListItem>
             ))}
           </List>
@@ -84,7 +105,19 @@ export default function ControlledAccordions(state) {
                 "Каталог 6",
               ].map((e, i) => (
                 <ListItem button key={i}>
-                  {e}
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                  >
+                    <div>
+                      {" "}
+                      <InsertDriveFileOutlinedIcon />{" "}
+                    </div>
+                    <div style={{ marginLeft: "10px" }}>{e}</div>
+                  </div>
                 </ListItem>
               ))}
             </List>

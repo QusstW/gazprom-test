@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    backgroundColor: "#00bbd3",
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
@@ -95,6 +96,7 @@ export default function Menu(state) {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
+        color="primary"
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,

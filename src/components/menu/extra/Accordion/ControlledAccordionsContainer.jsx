@@ -4,6 +4,7 @@ import { getTableData } from "../../../../redux/menuReducer";
 
 let mapStateToProps = (state) => {
   return {
+    navBarName: state.menu.navBarName,
     analyticsList: state.menu.analyticsList,
   };
 };
